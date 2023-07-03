@@ -1,0 +1,23 @@
+.aw-navigation {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   gap: vw(24px, 320px);
+
+   @media screen and (min-width: 526px) {
+      gap: vw(24px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      gap: vw(24px);
+   }
+   @media screen and (min-width: 1440px) {
+      gap: 24px;
+   }
+
+   &__item {
+      &-name {
+         font-family: var(--aw-font-family-heading);
+      }
+   }
+}

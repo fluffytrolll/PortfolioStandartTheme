@@ -1,0 +1,15 @@
+/* Категориии 01 по 03 - это база! */
+@import "01-settings/global";
+@import "02-tools/effects";
+@import "02-tools/mixins";
+@import "02-tools/functions";
+@import "03-generic/reset";
+
+/* Категрия 04 cодержит базовые HTML элементы. */
+@import "04-elements/index";
+
+/* Категория 05 содержит большие блоки, составные части компонентов. */
+@import "05-blocks/index";
+
+/* Категория 06 содержит компоненты - массивные блоки старниц. */
+@import "06-components/index";

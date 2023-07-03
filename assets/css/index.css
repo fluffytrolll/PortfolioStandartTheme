@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* Категориии 01 по 03 - это база! */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@500&display=swap");
+:root {
+  --aw-font-family-heading: "Rubik", sans-serif;
+  --aw-font-family-text: "Roboto", sans-serif;
+  --aw-color-white: #fff;
+  --aw-color-black: #000;
+  --aw-color-gray: #f4f4f4;
+  --aw-color-inner-text: #929aa1;
+  --aw-color-link: #0034ec;
+}
+
+/* Для всех элементов по умолчанию */
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+* {
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+*::-webkit-scrollbar {
+  width: 16px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--aw-color-gray);
+  border-radius: 8px;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--aw-color-gray);
+  border-radius: 8px;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0px;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0px;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+input[type=hidden] {
+  display: none;
+}
+
+/* Убираем декорации для ссылок */
+a,
+a[class] {
+  text-decoration: none;
+  outline: none;
+}
+
+/* Настраиваем ссылки */
+a,
+a[class] {
+  color: var(--aw-color-black);
+  -webkit-transition: color ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s;
+}
+a:focus-visible, a:hover, a:active,
+a[class]:focus-visible,
+a[class]:hover,
+a[class]:active {
+  color: var(--aw-color-link);
+}
+
+img {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transition: -webkit-filter ease-in-out 0.5s;
+  transition: -webkit-filter ease-in-out 0.5s;
+  transition: filter ease-in-out 0.5s;
+  transition: filter ease-in-out 0.5s, -webkit-filter ease-in-out 0.5s;
+}
+
+img.lazy {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+/* Устанавливаем базовый цвет текста */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+figcaption,
+blockquote,
+dl,
+dd,
+input,
+button,
+textarea select {
+  color: var(--aw-color-black);
+}
+
+/* Настраеваем body */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  background-color: var(--aw-color-white);
+  font-family: var(--aw-font-family-text);
+}
+
+/* Категрия 04 cодержит базовые HTML элементы. */
+.aw-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 7.5vw;
+}
+@media screen and (min-width: 526px) {
+  .aw-navigation {
+    gap: 3.2258064516vw;
+  }
+}
+@media screen and (min-width: 921px) {
+  .aw-navigation {
+    gap: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aw-navigation {
+    gap: 24px;
+  }
+}
+.aw-navigation__item-name {
+  font-family: var(--aw-font-family-heading);
+}
+
+/* Категория 05 содержит большие блоки, составные части компонентов. */
+.aw-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-width: none;
+  padding: 0px 5vw;
+}
+@media screen and (min-width: 526px) {
+  .aw-block {
+    height: 8.6021505376vw;
+    padding: 0px 3.2258064516vw;
+  }
+}
+@media screen and (min-width: 921px) {
+  .aw-block {
+    height: 4.4444444444vw;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0px 0.5555555556vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aw-block {
+    height: 64px;
+    max-width: 1440px;
+    padding: 0px;
+  }
+}
+
+/* Категория 06 содержит компоненты - массивные блоки старниц. */
+.aw-header {
+  position: sticky;
+  top: 0px;
+  display: none;
+}
+@media screen and (min-width: 526px) {
+  .aw-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.aw-header__wrapper {
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}

@@ -1,0 +1,25 @@
+.aw-block {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   min-width: none;
+   padding: 0px vw(16px, 320px);
+
+   @media screen and (min-width: 526px) {
+      height: vw(64px, 744px);
+      padding: 0px vw(24px, 744px);
+   }
+
+   @media screen and (min-width: 921px) {
+      height: vw(64px);
+      max-width: vw(1440px);
+      margin: 0 auto;
+      padding: 0px vw(8px);
+   }
+
+   @media screen and (min-width: 1440px) {
+      height: 64px;
+      max-width: 1440px;
+      padding: 0px;
+   }
+}
