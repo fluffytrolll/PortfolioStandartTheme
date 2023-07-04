@@ -1,8 +1,8 @@
 <?php
 
-include_once("inc/func/comments-disabled.php");
-include_once("inc/func/custom-post-types.php");
-include_once("inc/func/custom-logo-setup.php");
+include_once("func/comments-disabled.php");
+include_once("func/custom-post-types.php");
+include_once("func/custom-logo-setup.php");
 
 // Подключение дополнительных параметров
 add_action("after_setup_theme", function () {

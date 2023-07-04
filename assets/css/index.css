@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Категориии 01 по 03 - это база! */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500&display=swap");
 :root {
   --aw-font-family-heading: "Rubik", sans-serif;
   --aw-font-family-text: "Roboto", sans-serif;
@@ -8,7 +8,7 @@
   --aw-color-black: #000;
   --aw-color-gray: #f4f4f4;
   --aw-color-inner-text: #929aa1;
-  --aw-color-link: #0034ec;
+  --aw-color-link-underline: #ffe600;
 }
 
 /* Для всех элементов по умолчанию */
@@ -111,7 +111,7 @@ a:focus-visible, a:hover, a:active,
 a[class]:focus-visible,
 a[class]:hover,
 a[class]:active {
-  color: var(--aw-color-link);
+  color: var(--aw-color-black);
 }
 
 img {
@@ -160,6 +160,40 @@ body {
 }
 
 /* Категрия 04 cодержит базовые HTML элементы. */
+@media screen and (min-width: 921px) {
+  .aw-logo {
+    width: 9.8611111111vw;
+    height: 2.3611111111vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aw-logo {
+    width: 142px;
+    height: 34px;
+  }
+}
+
+.undeline {
+  position: relative;
+  z-index: 1;
+}
+.undeline::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: 0px;
+  z-index: -1;
+  height: 42%;
+  min-width: 0px;
+  -webkit-transition: min-width ease-in-out 0.3s;
+  transition: min-width ease-in-out 0.3s;
+}
+.undeline:hover::before {
+  min-width: 65%;
+  border-radius: 8px;
+  background-color: var(--aw-color-link-underline);
+}
+
 .aw-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,11 +208,11 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 7.5vw;
+  gap: 2.5vw;
 }
 @media screen and (min-width: 526px) {
   .aw-navigation {
-    gap: 3.2258064516vw;
+    gap: 1.0752688172vw;
   }
 }
 @media screen and (min-width: 921px) {
@@ -191,8 +225,123 @@ body {
     gap: 24px;
   }
 }
+.aw-navigation_mobile {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 16.875vw;
+  padding: 2.5vw;
+  margin: 0px 5vw;
+  margin-bottom: 5vw;
+  border-radius: 3.75vw;
+  background-color: var(--aw-color-white);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 0.3125vw 0.9375vw 0px rgba(0, 0, 0, 0.12), 0px 1.875vw 1.875vw 0px rgba(0, 0, 0, 0.1), 0px 4.0625vw 2.5vw 0px rgba(0, 0, 0, 0.06), 0px 7.1875vw 2.8125vw 0px rgba(0, 0, 0, 0.02), 0px 11.25vw 3.125vw 0px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 0.3125vw 0.9375vw 0px rgba(0, 0, 0, 0.12), 0px 1.875vw 1.875vw 0px rgba(0, 0, 0, 0.1), 0px 4.0625vw 2.5vw 0px rgba(0, 0, 0, 0.06), 0px 7.1875vw 2.8125vw 0px rgba(0, 0, 0, 0.02), 0px 11.25vw 3.125vw 0px rgba(0, 0, 0, 0);
+}
+@media screen and (min-width: 526px) {
+  .aw-navigation_mobile {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 0.1344086022vw 0.4032258065vw 0px rgba(0, 0, 0, 0.12), 0px 0.8064516129vw 0.8064516129vw 0px rgba(0, 0, 0, 0.1), 0px 1.747311828vw 1.0752688172vw 0px rgba(0, 0, 0, 0.06), 0px 3.0913978495vw 1.2096774194vw 0px rgba(0, 0, 0, 0.02), 0px 4.8387096774vw 1.3440860215vw 0px rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 0.1344086022vw 0.4032258065vw 0px rgba(0, 0, 0, 0.12), 0px 0.8064516129vw 0.8064516129vw 0px rgba(0, 0, 0, 0.1), 0px 1.747311828vw 1.0752688172vw 0px rgba(0, 0, 0, 0.06), 0px 3.0913978495vw 1.2096774194vw 0px rgba(0, 0, 0, 0.02), 0px 4.8387096774vw 1.3440860215vw 0px rgba(0, 0, 0, 0);
+  }
+}
+@media screen and (min-width: 921px) {
+  .aw-navigation_mobile {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 0.0694444444vw 0.2083333333vw 0px rgba(0, 0, 0, 0.12), 0px 0.4166666667vw 0.4166666667vw 0px rgba(0, 0, 0, 0.1), 0px 0.9027777778vw 0.5555555556vw 0px rgba(0, 0, 0, 0.06), 0px 1.5972222222vw 0.625vw 0px rgba(0, 0, 0, 0.02), 0px 2.5vw 0.6944444444vw 0px rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 0.0694444444vw 0.2083333333vw 0px rgba(0, 0, 0, 0.12), 0px 0.4166666667vw 0.4166666667vw 0px rgba(0, 0, 0, 0.1), 0px 0.9027777778vw 0.5555555556vw 0px rgba(0, 0, 0, 0.06), 0px 1.5972222222vw 0.625vw 0px rgba(0, 0, 0, 0.02), 0px 2.5vw 0.6944444444vw 0px rgba(0, 0, 0, 0);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aw-navigation_mobile {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 6px 6px 0px rgba(0, 0, 0, 0.1), 0px 13px 8px 0px rgba(0, 0, 0, 0.06), 0px 23px 9px 0px rgba(0, 0, 0, 0.02), 0px 36px 10px 0px rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 6px 6px 0px rgba(0, 0, 0, 0.1), 0px 13px 8px 0px rgba(0, 0, 0, 0.06), 0px 23px 9px 0px rgba(0, 0, 0, 0.02), 0px 36px 10px 0px rgba(0, 0, 0, 0);
+  }
+}
+@media screen and (min-width: 526px) {
+  .aw-navigation_mobile {
+    width: 45%;
+    height: 7.2580645161vw;
+    padding: 1.0752688172vw;
+    margin: 0px;
+    margin-bottom: 2.1505376344vw;
+    border-radius: 1.6129032258vw;
+  }
+}
+.aw-navigation__item {
+  display: inline;
+}
 .aw-navigation__item-name {
+  display: inherit;
   font-family: var(--aw-font-family-heading);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+@media screen and (min-width: 921px) {
+  .aw-navigation__item-name {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aw-navigation__item-name {
+    font-size: 16px;
+  }
+}
+.aw-navigation__item_mobile {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625vw;
+}
+@media screen and (min-width: 526px) {
+  .aw-navigation__item_mobile {
+    gap: 0.2688172043vw;
+  }
+}
+.aw-navigation__item-name_mobile {
+  display: inline;
+  font-family: var(--aw-font-family-heading);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  font-size: 3.4375vw;
+}
+@media screen and (min-width: 526px) {
+  .aw-navigation__item-name_mobile {
+    font-size: 1.6129032258vw;
+  }
+}
+.aw-navigation__icon {
+  width: 7.5vw;
+  height: 7.5vw;
+}
+@media screen and (min-width: 526px) {
+  .aw-navigation__icon {
+    width: 3.2258064516vw;
+    height: 3.2258064516vw;
+  }
+}
+@media screen and (min-width: 921px) {
+  .aw-navigation__icon {
+    width: 1.6666666667vw;
+    height: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aw-navigation__icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* Категория 05 содержит большие блоки, составные части компонентов. */
@@ -219,7 +368,7 @@ body {
     height: 4.4444444444vw;
     max-width: 100vw;
     margin: 0 auto;
-    padding: 0px 0.5555555556vw;
+    padding: 0px 1.6666666667vw;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -232,19 +381,43 @@ body {
 
 /* Категория 06 содержит компоненты - массивные блоки старниц. */
 .aw-header {
-  position: sticky;
-  top: 0px;
-  display: none;
+  position: fixed;
+  bottom: 0px;
+  top: unset;
+  width: 100%;
 }
-@media screen and (min-width: 526px) {
+@media screen and (min-width: 921px) {
   .aw-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    position: sticky;
+    top: 0px;
+    bottom: unset;
   }
 }
 .aw-header__wrapper {
-  display: inherit;
+  position: relative;
+  display: none;
+}
+@media screen and (min-width: 921px) {
+  .aw-header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.aw-header__wrapper_mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -252,7 +425,78 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 921px) {
+  .aw-header__wrapper_mobile {
+    display: none;
+  }
+}
+.aw-header__go-top {
+  position: absolute;
+  top: -7.5vw;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 13.125vw;
+  height: 7.5vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7.5vw;
+  background-color: #595959;
+}
+@media screen and (min-width: 526px) {
+  .aw-header__go-top {
+    top: -3.2258064516vw;
+    width: 5.6451612903vw;
+    height: 3.2258064516vw;
+    border-radius: 3.2258064516vw;
+  }
+}
+@media screen and (min-width: 921px) {
+  .aw-header__go-top {
+    top: -1.6666666667vw;
+    width: 2.9166666667vw;
+    height: 1.6666666667vw;
+    border-radius: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aw-header__go-top {
+    top: -24px;
+    width: 42px;
+    height: 24px;
+    border-radius: 24px;
+  }
+}
+.aw-header__go-top__icon {
+  width: 7.5vw;
+  height: 7.5vw;
+}
+@media screen and (min-width: 526px) {
+  .aw-header__go-top__icon {
+    width: 3.2258064516vw;
+    height: 3.2258064516vw;
+  }
+}
+@media screen and (min-width: 921px) {
+  .aw-header__go-top__icon {
+    width: 1.6666666667vw;
+    height: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aw-header__go-top__icon {
+    width: 24px;
+    height: 24px;
+  }
 }

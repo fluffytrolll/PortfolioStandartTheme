@@ -1,16 +1,86 @@
 .aw-header {
-   position: sticky;
-   top: 0px;
-   display: none;
+   position: fixed;
+   bottom: 0px;
+   top: unset;
+   width: 100%;
 
-   @media screen and (min-width: 526px) {
-      display: flex;
+   @media screen and (min-width: 921px) {
+      position: sticky;
+      top: 0px;
+      bottom: unset;
    }
 
    &__wrapper {
-      display: inherit;
-      flex-direction: row;
+      position: relative;
+      display: none;
+
+      @media screen and (min-width: 921px) {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+      }
+
+      &_mobile {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: center;
+
+         @media screen and (min-width: 921px) {
+            display: none;
+         }
+      }
+   }
+
+   &__go-top {
+      position: absolute;
+      top: vw(-24px, 320px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      width: vw(42px, 320px);
+      height: vw(24px, 320px);
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
+      border-radius: vw(24px, 320px);
+      background-color: #595959;
+
+      @media screen and (min-width: 526px) {
+         top: vw(-24px, 744px);
+         width: vw(42px, 744px);
+         height: vw(24px, 744px);
+         border-radius: vw(24px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         top: vw(-24px);
+         width: vw(42px);
+         height: vw(24px);
+         border-radius: vw(24px);
+      }
+      @media screen and (min-width: 1440px) {
+         top: -24px;
+         width: 42px;
+         height: 24px;
+         border-radius: 24px;
+      }
+
+      &__icon {
+         width: vw(24px, 320px);
+         height: vw(24px, 320px);
+
+         @media screen and (min-width: 526px) {
+            width: vw(24px, 744px);
+            height: vw(24px, 744px);
+         }
+         @media screen and (min-width: 921px) {
+            width: vw(24px);
+            height: vw(24px);
+         }
+         @media screen and (min-width: 1440px) {
+            width: 24px;
+            height: 24px;
+         }
+      }
    }
 }

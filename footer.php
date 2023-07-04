@@ -1,5 +1,5 @@
 </main>
-<footer></footer>
+<footer class="aw-footer"></footer>
 </body>
 
 </html>

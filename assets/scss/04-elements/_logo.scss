@@ -1,0 +1,11 @@
+.aw-logo {
+   @media screen and (min-width: 921px) {
+      width: vw(142px);
+      height: vw(34px);
+   }
+
+   @media screen and (min-width: 1440px) {
+      width: 142px;
+      height: 34px;
+   }
+}
