@@ -3,6 +3,7 @@
    bottom: 0px;
    top: unset;
    width: 100%;
+   z-index: 10;
 
    @media screen and (min-width: 921px) {
       position: sticky;
@@ -13,12 +14,20 @@
    &__wrapper {
       position: relative;
       display: none;
+      background-color: var(--aw-color-white);
 
+      @media screen and (min-width: 526px) {
+         height: vw(64px, 744px);
+      }
       @media screen and (min-width: 921px) {
          display: flex;
          flex-direction: row;
          align-items: center;
          justify-content: space-between;
+         height: vw(64px);
+      }
+      @media screen and (min-width: 1440px) {
+         height: 64px;
       }
 
       &_mobile {

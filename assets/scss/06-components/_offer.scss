@@ -1,0 +1,163 @@
+.aw-offer {
+   display: block;
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: vw(24px, 320px);
+
+      @media screen and (min-width: 526px) {
+         gap: vw(24px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         flex-direction: row;
+         gap: vw(24px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 24px;
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      max-width: none;
+      height: vw(415px, 320px);
+      padding: vw(24px, 320px);
+
+      @media screen and (min-width: 526px) {
+         height: vw(650px, 744px);
+         max-width: vw(696px, 744px);
+         padding: vw(48px, 744px);
+      }
+
+      @media screen and (min-width: 921px) {
+         height: vw(650px);
+         max-width: vw(700px);
+         padding: vw(48px);
+      }
+
+      @media screen and (min-width: 1440px) {
+         height: 650px;
+         max-width: 700px;
+         padding: 48px;
+      }
+
+      &_background {
+         background: radial-gradient(
+               84.5% 73.34% at 97.86% 100%,
+               rgba(101, 108, 134, 0.38) 0%,
+               rgba(103, 111, 139, 0) 100%
+            ),
+            radial-gradient(
+               47.6% 42.4% at 93.71% 13.13%,
+               rgba(230, 190, 98, 0.53) 0%,
+               rgba(235, 196, 102, 0.01) 100%
+            ),
+            #f9f9f9;
+         backdrop-filter: blur(50px);
+      }
+   }
+
+   &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: vw(18px, 320px);
+
+      @media screen and (min-width: 526px) {
+         gap: vw(18px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(18px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 18px;
+      }
+   }
+
+   &__title {
+      font-family: var(--aw-font-family-heading);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      font-size: vw(22px, 320px);
+      color: var(--aw-color-black);
+
+      @media screen and (min-width: 526px) {
+         font-size: vw(42px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         font-size: vw(42px);
+      }
+      @media screen and (min-width: 1440px) {
+         font-size: 42px;
+      }
+   }
+
+   &__text {
+      font-size: vw(14px, 320px);
+      font-family: var(--aw-font-family-text);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: vw(0.14px, 320px);
+      color: var(--aw-color-black);
+
+      @media screen and (min-width: 526px) {
+         font-size: vw(16px, 744px);
+         letter-spacing: vw(0.14px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         font-size: vw(16px);
+         letter-spacing: vw(0.14px);
+      }
+      @media screen and (min-width: 1440px) {
+         font-size: 16px;
+         letter-spacing: 0.14px;
+      }
+   }
+
+   &__links {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: vw(12px, 320px);
+
+      @media screen and (min-width: 526px) {
+         flex-direction: row;
+         justify-content: flex-start;
+         gap: vw(12px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(12px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 12px;
+      }
+   }
+
+   &__photo {
+      width: 100%;
+      height: vw(288px, 320px);
+      background-color: var(--aw-color-gray);
+
+      @media screen and (min-width: 526px) {
+         height: vw(480px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         width: vw(476px);
+         height: vw(650px);
+      }
+      @media screen and (min-width: 1440px) {
+         width: 476px;
+         height: 650px;
+      }
+   }
+}

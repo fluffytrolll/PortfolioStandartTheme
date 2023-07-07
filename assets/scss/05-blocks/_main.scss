@@ -1,0 +1,19 @@
+.aw-main {
+   display: flex;
+   flex-direction: column;
+   gap: vw(24px, 320px);
+   padding-top: vw(16px, 320px);
+
+   @media screen and (min-width: 526px) {
+      gap: vw(24px, 744px);
+      padding-top: vw(16px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      gap: vw(24px);
+      padding-top: vw(0px);
+   }
+   @media screen and (min-width: 1440px) {
+      gap: 24px;
+      padding-top: 0px;
+   }
+}

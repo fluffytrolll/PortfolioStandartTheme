@@ -12,6 +12,6 @@
 
 <body <?php body_class() ?>>
   <?php wp_body_open();
-  include_once("inc/headers/main-header.php");
+  include_once("inc/header/main-header.php");
   ?>
   <main class="aw-main">

@@ -1,0 +1,251 @@
+.aw-about {
+   display: block;
+   &__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: vw(24px, 320px);
+
+      @media screen and (min-width: 526px) {
+         gap: vw(24px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         flex-direction: row;
+         gap: vw(24px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 24px;
+      }
+   }
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      gap: vw(18px, 320px);
+
+      @media screen and (min-width: 526px) {
+         gap: vw(16px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(16px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 16px;
+      }
+   }
+
+   &__block {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+         font-size: vw(22px, 320px);
+         margin-bottom: vw(12px, 320px);
+         @media screen and (min-width: 526px) {
+            font-size: vw(42px, 744px);
+            margin-bottom: vw(18px, 744px);
+         }
+         @media screen and (min-width: 921px) {
+            font-size: vw(42px);
+            margin-bottom: vw(18px);
+         }
+         @media screen and (min-width: 1440px) {
+            font-size: 42px;
+            margin-bottom: 18px;
+         }
+      }
+
+      h3 {
+         font-size: vw(18px, 320px);
+         margin-bottom: vw(12px, 320px);
+         @media screen and (min-width: 526px) {
+            font-size: vw(24px, 744px);
+            margin-bottom: vw(14px, 744px);
+         }
+         @media screen and (min-width: 921px) {
+            font-size: vw(24px);
+            margin-bottom: vw(14px);
+         }
+         @media screen and (min-width: 1440px) {
+            font-size: 24px;
+            margin-bottom: 14px;
+         }
+      }
+   }
+
+   //  font-size: 42px;
+
+   &__title {
+      font-family: var(--aw-font-family-heading);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      color: var(--aw-color-black);
+   }
+
+   &__text {
+      font-family: var(--aw-font-family-text);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 0.16px;
+      color: var(--aw-color-black);
+      font-size: vw(14px, 320px);
+
+      @media screen and (min-width: 526px) {
+         font-size: vw(16px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         font-size: vw(16px);
+      }
+      @media screen and (min-width: 1440px) {
+         font-size: 16px;
+      }
+   }
+
+   &__text + &__text {
+      margin-top: vw(18px, 320px);
+
+      @media screen and (min-width: 526px) {
+         margin-top: vw(16px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         margin-top: vw(16px);
+      }
+      @media screen and (min-width: 1440px) {
+         margin-top: 16px;
+      }
+   }
+
+   &__techs {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: vw(12px, 320px);
+      margin-bottom: vw(18px, 320px);
+
+      @media screen and (min-width: 526px) {
+         gap: vw(12px, 744px);
+         margin-bottom: vw(18px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(12px);
+         margin-bottom: vw(18px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 12px;
+         margin-bottom: 18px;
+      }
+   }
+
+   &__action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: vw(18px, 320px);
+      width: 100%;
+      margin-top: vw(42px, 320px);
+
+      @media screen and (min-width: 526px) {
+         flex-direction: row;
+         flex-wrap: nowrap;
+         align-items: center;
+         justify-content: flex-start;
+         gap: vw(18px, 744px);
+         margin-top: 0px;
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(18px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 18px;
+      }
+   }
+
+   &__action-sub {
+      font-family: var(--aw-font-family-text);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 0.16px;
+      color: var(--aw-color-black);
+      font-size: vw(18px, 320px);
+
+      @media screen and (min-width: 526px) {
+         font-size: vw(18px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         font-size: vw(18px);
+      }
+      @media screen and (min-width: 1440px) {
+         font-size: 18px;
+      }
+   }
+
+   &__video {
+      width: 100%;
+      height: vw(480px, 320px);
+      background-color: var(--aw-color-gray);
+
+      @media screen and (min-width: 526px) {
+         height: vw(920px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         width: vw(476px);
+         height: vw(650px);
+      }
+      @media screen and (min-width: 1440px) {
+         width: 476px;
+         height: 650px;
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      max-width: none;
+      height: auto;
+      padding: vw(24px, 320px);
+
+      @media screen and (min-width: 526px) {
+         height: vw(650px, 744px);
+         max-width: vw(696px, 744px);
+         padding: vw(48px, 744px);
+      }
+
+      @media screen and (min-width: 921px) {
+         height: vw(650px);
+         max-width: vw(700px);
+         padding: vw(48px);
+      }
+
+      @media screen and (min-width: 1440px) {
+         height: 650px;
+         max-width: 700px;
+         padding: 48px;
+      }
+
+      &_background {
+         background: radial-gradient(
+               88.99% 77.9% at 0% 100%,
+               rgba(238, 103, 131, 0.34) 0%,
+               rgba(214, 14, 60, 0.03) 100%
+            ),
+            radial-gradient(
+               47.6% 42.4% at 93.71% 13.13%,
+               rgba(107, 92, 229, 0.1) 0%,
+               rgba(107, 92, 229, 0.01) 100%
+            ),
+            #f9f9f9;
+         backdrop-filter: blur(50px);
+      }
+   }
+}

@@ -8,8 +8,10 @@ http_response_code(200);
 
 get_header();
 
+include_once("inc/offer/offer-block.php");
+include_once("inc/about/about-block.php");
 ?>
-<section class="aw-offer"></section>
+
 <section class="aw-works"></section>
 <section class="aw-about"></section>
 <section class="aw-posts"></section>
