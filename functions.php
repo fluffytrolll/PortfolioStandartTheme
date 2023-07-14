@@ -3,7 +3,7 @@
 include_once("func/comments-disabled.php");
 include_once("func/custom-post-types.php");
 include_once("func/custom-logo-setup.php");
-include_once("func/theme_customizer_menu.php");
+include_once("func/theme-customizer-menu.php");
 include_once("func/get-posts.php");
 
 // Подключение дополнительных параметров

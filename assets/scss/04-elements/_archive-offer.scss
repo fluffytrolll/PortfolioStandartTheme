@@ -1,0 +1,97 @@
+.aw-archive-offer {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background: radial-gradient(
+         47.6% 42.4% at 93.71% 13.13%,
+         rgba(107, 92, 229, 0.1) 0%,
+         rgba(107, 92, 229, 0.01) 100%
+      ),
+      #f9f9f9;
+   width: 100%;
+   backdrop-filter: blur(50px);
+   margin-top: vw(24px, 320px);
+   padding: vw(24px, 320px);
+   border-radius: vw(32px, 320px);
+   min-height: vw(288px, 320px);
+
+   @media screen and (min-width: 526px) {
+      margin-top: vw(24px, 744px);
+      padding: vw(48px, 744px);
+      border-radius: vw(32px, 744px);
+      min-height: vw(288px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      margin-top: vw(24px);
+      padding: vw(48px);
+      border-radius: vw(32px);
+      min-height: vw(288px);
+   }
+   @media screen and (min-width: 1440px) {
+      margin-top: 24px;
+      padding: 48px;
+      border-radius: 32px;
+      min-height: 288px;
+   }
+
+   &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: vw(16px, 320px);
+
+      @media screen and (min-width: 526px) {
+         gap: vw(18px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(18px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 18px;
+      }
+   }
+
+   &__head,
+   &__description {
+      color: var(--aw-color-black);
+   }
+
+   &__head {
+      font-family: var(--aw-font-family-heading);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      font-size: vw(22px, 320px);
+
+      @media screen and (min-width: 526px) {
+         font-size: vw(42px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         font-size: vw(42px);
+      }
+      @media screen and (min-width: 1440px) {
+         font-size: 42px;
+      }
+   }
+
+   &__description {
+      font-family: var(--aw-font-family-text);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 20.8px */
+      font-size: vw(16px, 320px);
+      letter-spacing: vw(0.16px, 320px);
+
+      @media screen and (min-width: 526px) {
+         font-size: vw(16px, 744px);
+         letter-spacing: vw(0.16px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         font-size: vw(16px);
+         letter-spacing: vw(0.16px);
+      }
+      @media screen and (min-width: 1440px) {
+         font-size: 16px;
+         letter-spacing: 0.16px;
+      }
+   }
+}

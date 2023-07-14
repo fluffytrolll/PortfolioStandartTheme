@@ -1,0 +1,22 @@
+.aw-grid {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(2, 1fr);
+   column-gap: vw(24px, 320px);
+   row-gap: vw(24px, 320px);
+
+   @media screen and (min-width: 526px) {
+      column-gap: vw(24px, 744px);
+      row-gap: vw(24px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      column-gap: vw(24px);
+      row-gap: vw(24px);
+   }
+   @media screen and (min-width: 1440px) {
+      column-gap: 24px;
+      row-gap: 24px;
+   }
+}

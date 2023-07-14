@@ -1,0 +1,16 @@
+.aw-single {
+   display: flex;
+   flex-direction: column;
+   gap: vw(64px, 320px);
+
+   @media screen and (min-width: 526px) {
+      gap: vw(64px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      flex-direction: row;
+      gap: vw(64px);
+   }
+   @media screen and (min-width: 1440px) {
+      gap: 64px;
+   }
+}

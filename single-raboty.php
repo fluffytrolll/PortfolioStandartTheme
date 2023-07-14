@@ -8,6 +8,10 @@ http_response_code(200);
 
 get_header();
 
-// … остальной код шаблона
+?>
 
+
+
+<?php
 get_footer();
+?>

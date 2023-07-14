@@ -1,30 +1,4 @@
-<?php
-/*
-Template Name: Posts
-Template Post Type: post, page, product
-*/
-
-http_response_code(200);
-
-get_header();
-?>
-
-<div class="aw-blog aw-block">
-  <div class="aw-blog__search">
-    <form role="search" method="get" action="<?php echo esc_url(home_url('/')) . "posty/"; ?>">
-      <label class="aw-search" for="search">
-        <input class="aw-search__input" type="search" placeholder="Что ищем сегодня?"
-          value="<?php echo get_search_query(); ?>" name="search" id="search">
-        <button class="aw-search__submit" type="submit">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M8.625 2.063a6.562 6.562 0 1 0 0 13.124 6.562 6.562 0 0 0 0-13.124ZM.937 8.625a7.688 7.688 0 1 1 13.507 5.024l2.454 2.454a.561.561 0 1 1-.796.794l-2.454-2.453a7.688 7.688 0 0 1-12.71-5.82Z"
-              fill="#fff" />
-          </svg>
-        </button>
-      </label>
-    </form>
-  </div>
+<section class="aw-posts aw-block" id="posty">
   <div class="aw-grid">
     <?php
     global $post;
@@ -32,8 +6,6 @@ get_header();
       'post_type' => 'post',
       'posts_per_page' => 2,
       'orderby' => 'ASC',
-      's' => get_query_var("search") ? sanitize_text_field(get_query_var("search")) : '',
-      'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
     ]);
 
     if ($query->have_posts()) {
@@ -81,26 +53,26 @@ get_header();
     wp_reset_postdata();
     ?>
   </div>
-  <?php
-  global $wp_query;
-
-  $pagination = paginate_links(
-    array(
-      'base' => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
-      'format' => '?paged=%#%',
-      'current' => max(1, get_query_var('paged')),
-      'total' => $wp_query->max_num_pages,
-      'prev_text' => __('&laquo; Previous', 'your-theme-textdomain'),
-      'next_text' => __('Next &raquo;', 'your-theme-textdomain'),
-    )
-  );
-
-  if ($pagination) {
-    echo '<div class="pagination">' . $pagination . '</div>';
-  }
-  ?>
-</div>
-
-<?php
-get_footer();
-?>
+  <div class="aw-archive-offer">
+    <div class="aw-archive-offer__heading">
+      <h2 class="aw-archive-offer__head">Еще больше статей!</h2>
+      <p class="aw-archive-offer__description">
+        Вам понравились мои статьи?
+        <br />
+        По ссылке можете найти ещё больше статей от меня.
+      </p>
+    </div>
+    <div class="aw-button-icon-link">
+      <span class="aw-button-icon-link__title">Смотреть всё</span>
+      <div class="aw-button-icon-link__icon">
+        <svg class="aw-button-icon-link__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.752.752 0 0 1-1.244-.23.75.75 0 0 1 .184-.83l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06Z"
+            fill="#000" />
+        </svg>
+      </div>
+      <a class="aw-button-icon-link__link" href="/posty/" title="Смотреть всё"></a>
+    </div>
+  </div>
+</section>

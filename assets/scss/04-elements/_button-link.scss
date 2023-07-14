@@ -76,8 +76,10 @@ a[class="aw-button-link"] {
    position: relative;
    display: flex;
    align-items: center;
+   justify-content: space-between;
    padding-left: vw(24px, 320px);
    border-radius: vw(100px, 320px);
+   width: fit-content;
    max-width: vw(225px, 320px);
    background-color: var(--aw-color-black);
    color: var(--aw-color-white);
