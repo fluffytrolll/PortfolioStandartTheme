@@ -21,19 +21,19 @@ a[class="aw-button-link"] {
       padding: vw(12px, 744px) vw(24px, 744px);
       border-radius: vw(100px, 744px);
       letter-spacing: vw(0.24px, 744px);
-      font-size: vw(24px, 744px);
+      font-size: vw(18px, 744px);
    }
    @media screen and (min-width: 921px) {
       padding: vw(12px) vw(24px);
       border-radius: vw(100px);
       letter-spacing: vw(0.24px);
-      font-size: vw(24px);
+      font-size: vw(18px);
    }
    @media screen and (min-width: 1440px) {
       padding: 12px 24px;
       border-radius: 100px;
       letter-spacing: 0.24px;
-      font-size: 24px;
+      font-size: 18px;
    }
 
    &:hover,
@@ -125,6 +125,7 @@ a[class="aw-button-link"] {
       color: var(--aw-color-black);
    }
 
+   &:focus,
    &:focus-visible {
       box-shadow: 0px 0px 0px vw(4px, 320px) rgba(5, 10, 31, 0.3);
 
@@ -150,15 +151,15 @@ a[class="aw-button-link"] {
 
       @media screen and (min-width: 526px) {
          letter-spacing: vw(0.24px, 744px);
-         font-size: vw(24px, 744px);
+         font-size: vw(18px, 744px);
       }
       @media screen and (min-width: 921px) {
          letter-spacing: vw(0.24px);
-         font-size: vw(24px);
+         font-size: vw(18px);
       }
       @media screen and (min-width: 1440px) {
          letter-spacing: 0.24px;
-         font-size: 24px;
+         font-size: 18px;
       }
    }
 

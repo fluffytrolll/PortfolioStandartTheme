@@ -1,0 +1,99 @@
+.aw-search {
+   display: inline-flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   background-color: var(--aw-color-gray);
+   border-radius: vw(32px, 320px);
+   width: 100%;
+
+   @media screen and (min-width: 526px) {
+      width: vw(408px, 744px);
+      border-radius: vw(32px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      width: vw(408px);
+      border-radius: vw(32px);
+   }
+   @media screen and (min-width: 1440px) {
+      width: 408px;
+      border-radius: 32px;
+   }
+
+   &__input {
+      border: none;
+      border-radius: inherit;
+      background-color: transparent;
+      width: 100%;
+      height: vw(42px, 320px);
+      padding: vw(12px, 320px);
+      font-family: var(--aw-font-family-text);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      font-size: vw(15px, 320px);
+
+      @media screen and (min-width: 526px) {
+         padding: vw(12px, 744px);
+         height: vw(42px, 744px);
+         font-size: vw(15px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         padding: vw(12px);
+         height: vw(42px);
+         font-size: vw(15px);
+      }
+      @media screen and (min-width: 1440px) {
+         padding: 12px;
+         height: 42px;
+         font-size: 15px;
+      }
+   }
+
+   &__submit {
+      cursor: pointer;
+      border: none;
+      background-color: var(--aw-color-black);
+      width: vw(42px, 320px);
+      height: vw(42px, 320px);
+      padding: vw(12px, 320px);
+      border-radius: vw(42px, 320px);
+
+      @media screen and (min-width: 526px) {
+         width: vw(42px, 744px);
+         height: vw(42px, 744px);
+         padding: vw(12px, 744px);
+         border-radius: vw(42px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         width: vw(42px);
+         height: vw(42px);
+         padding: vw(12px);
+         border-radius: vw(42px);
+      }
+      @media screen and (min-width: 1440px) {
+         width: 42px;
+         height: 42px;
+         padding: 12px;
+         border-radius: 42px;
+      }
+   }
+
+   &__icon {
+      width: vw(18px, 320px);
+      height: vw(18px, 320px);
+
+      @media screen and (min-width: 526px) {
+         width: vw(18px, 744px);
+         height: vw(18px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         width: vw(18px);
+         height: vw(18px);
+      }
+      @media screen and (min-width: 1440px) {
+         width: 18px;
+         height: 18px;
+      }
+   }
+}

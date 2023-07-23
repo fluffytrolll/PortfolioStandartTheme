@@ -4,12 +4,38 @@
    &::before {
       content: "";
       position: absolute;
-      bottom: -10%;
+      bottom: -11%;
       left: 0px;
       z-index: -1;
       height: 42%;
       min-width: 0%;
-      transition: min-width ease-in-out 0.3s;
+      background-color: var(--aw-color-link-underline);
+      opacity: 0;
+      transition: min-width ease-in-out 0.4s, opacity ease-out 0.8s;
+
+      border-radius: vw(8px, 320px);
+
+      @media screen and (min-width: 526px) {
+         border-radius: vw(8px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         border-radius: vw(8px);
+      }
+      @media screen and (min-width: 1440px) {
+         border-radius: 8px;
+      }
+   }
+
+   &_red {
+      &::before {
+         background: linear-gradient(90deg, #fc4714 30%, #fea062 100%);
+      }
+   }
+
+   &_yellow {
+      &::before {
+         background: linear-gradient(90deg, #ffc769 30%, #ffe069 100%);
+      }
    }
 }
 
@@ -17,8 +43,7 @@ a:hover > span.undeline,
 a:active > span.undeline,
 a:focus-visible > span.undeline {
    &::before {
+      opacity: 1;
       min-width: 65%;
-      border-radius: 8px;
-      background-color: var(--aw-color-link-underline);
    }
 }

@@ -1,0 +1,117 @@
+.aw-contacts {
+   &__wrapper {
+      position: relative;
+      background: linear-gradient(347deg, #fafafa 0%, #fbfbfb 100%);
+      backdrop-filter: blur(50px);
+      padding: vw(24px, 320px);
+      padding-bottom: vw(24px, 320px);
+
+      @media screen and (min-width: 526px) {
+         padding: vw(48px, 744px);
+         padding-bottom: vw(165px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         padding: vw(48px);
+         padding-bottom: vw(182px);
+      }
+      @media screen and (min-width: 1440px) {
+         padding: 48px;
+         padding-bottom: 182px;
+      }
+   }
+
+   &__cover,
+   &__cover img {
+      display: none;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      border-radius: vw(32px, 320px);
+      z-index: -1;
+
+      @media screen and (min-width: 526px) {
+         display: block;
+         height: vw(474px, 744px);
+         width: vw(322px, 744px);
+         border-radius: vw(32px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         right: vw(72px);
+         height: vw(650px);
+         width: vw(533px);
+         border-radius: vw(32px);
+      }
+      @media screen and (min-width: 1440px) {
+         right: 72px;
+         height: 650px;
+         width: 533px;
+         border-radius: vw(32px);
+      }
+   }
+
+   &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: vw(16px, 320px);
+
+      @media screen and (min-width: 526px) {
+         gap: vw(18px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(18px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 18px;
+      }
+   }
+
+   &__head,
+   &__text {
+      color: var(--aw-color-black);
+   }
+
+   &__head {
+      text-align: center;
+      font-family: var(--aw-font-family-heading);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+
+      font-size: vw(22px, 320px);
+
+      @media screen and (min-width: 526px) {
+         text-align: left;
+         font-size: vw(42px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         font-size: vw(42px);
+      }
+      @media screen and (min-width: 1440px) {
+         font-size: 42px;
+      }
+   }
+
+   &__text {
+      text-align: center;
+      font-family: var(--aw-font-family-text);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: vw(0.14px, 320px);
+      font-size: vw(14px, 320px);
+
+      @media screen and (min-width: 526px) {
+         text-align: left;
+         letter-spacing: vw(0.16px, 744px);
+         font-size: vw(16px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         letter-spacing: vw(0.16px);
+         font-size: vw(16px);
+      }
+      @media screen and (min-width: 1440px) {
+         letter-spacing: 0.16px;
+         font-size: 16px;
+      }
+   }
+}

@@ -1,0 +1,113 @@
+.aw-footer {
+   margin-top: vw(24px, 320px);
+   padding-bottom: vw(120px, 320px);
+   min-height: auto;
+
+   @media screen and (min-width: 526px) {
+      margin-top: vw(24px, 744px);
+      padding-bottom: vw(120px, 744px);
+      min-height: vw(175px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      margin-top: vw(24px);
+      padding-bottom: 0px;
+      min-height: vw(175px);
+   }
+   @media screen and (min-width: 1440px) {
+      margin-top: 24px;
+      min-height: 175px;
+   }
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: vw(24px, 320px);
+
+      @media screen and (min-width: 526px) {
+         flex-direction: row;
+         align-items: flex-start;
+         justify-content: space-between;
+         gap: 0px;
+      }
+   }
+
+   &__navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: vw(24px, 320px);
+
+      @media screen and (min-width: 526px) {
+         align-items: flex-start;
+         justify-content: flex-start;
+         gap: vw(24px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(24px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 24px;
+      }
+   }
+
+   &__organization {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: vw(24px, 320px);
+      min-width: auto;
+
+      @media screen and (min-width: 526px) {
+         align-items: flex-start;
+         justify-content: flex-start;
+         gap: vw(24px, 744px);
+         min-width: vw(193px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(24px);
+         min-width: vw(193px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 24px;
+         min-width: 193px;
+      }
+   }
+
+   &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: vw(12px, 320px);
+
+      @media screen and (min-width: 526px) {
+         gap: vw(12px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(12px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 12px;
+      }
+   }
+
+   &__phone,
+   &__email {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      font-size: vw(16px, 320px);
+
+      @media screen and (min-width: 526px) {
+         font-size: vw(16px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         font-size: vw(16px);
+      }
+      @media screen and (min-width: 1440px) {
+         font-size: 16px;
+      }
+   }
+}

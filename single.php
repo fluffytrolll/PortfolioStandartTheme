@@ -3,7 +3,8 @@ http_response_code(200);
 
 get_header();
 ?>
-<section class="aw-single aw-block">
+
+<section class="aw-single aw-block" id="top">
   <article class="aw-article" itemscope itemtype="https://schema.org/Article">
     <?php if (have_posts()):
       while (have_posts()):
@@ -73,17 +74,46 @@ get_header();
         if ($query->have_posts()) {
           ?>
           <div class="aw-article__recomendations">
-            <section>
+            <section class="aw-article__recomendations">
               <?php
               while ($query->have_posts()) {
                 $query->the_post();
                 ?>
 
-                <article itemscope itemtype="http://schema.org/Article">
-                  <h2 itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                  <div itemprop="articleBody">
-                    <?php the_content(); ?>
+                <article class="aw-post-card aw-post-card_recomendation" itemscope itemtype="http://schema.org/BlogPosting">
+                  <div class="aw-post-card__image">
+                    <?php the_post_thumbnail(); ?>
+                    <div class="aw-post-card__cover"></div>
                   </div>
+                  <div class="aw-post-card__wrapper aw-post-card__wrapper_recomendation">
+                    <div class="aw-post-card__content">
+                      <div class="aw-post-card__heading">
+                        <h2 class="aw-post-card__head aw-post-card__head_recomendation" itemprop="headline">
+                          <?php the_title(); ?>
+                        </h2>
+                        <p class="aw-post-card__excerpt" itemprop="description">
+                          <?php echo get_the_excerpt(); ?>
+                        </p>
+                      </div>
+                      <div class="aw-post-card__meta">
+                        <span class="aw-post-card__time">
+                          Опубликовано
+                          <time itemprop="datePublished" datetime="<?php echo get_the_date('Y-m-d'); ?>">
+                            <?php echo get_the_date('j F Y'); ?>
+                          </time>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="aw-post-card__icon aw-post-card__icon_recomendation">
+                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                        <path d="M6 18 18 6m0 0H9m9 0v9" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <a class="aw-post-card__link" aria-label="Отрыть рекомендованную статью" href="<?php the_permalink(); ?>"
+                    title="<?php the_title_attribute(); ?>" itemprop="url"></a>
                 </article>
 
                 <?php

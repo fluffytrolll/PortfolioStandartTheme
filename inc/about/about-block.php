@@ -9,15 +9,15 @@
           <source src="<?= get_field('video'); ?>" type="video/webm">
         </video>
         <div class="aw-video-controls aw-video-controls_dark aw-video-controls_show">
-          <button class="aw-video-controls__button" type="button" aria-label="play pause toggle">
-            <svg class="aw-video-controls__play" xmlns="http://www.w3.org/2000/svg" width="48" height="56"
-              viewBox="0 0 48 56" fill="none">
+          <button class="aw-video-controls__button" type="button" aria-label="Проигрывать или пауза видео">
+            <svg class="aw-video-controls__play" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48"
+              height="56" viewBox="0 0 48 56" fill="none">
               <path
                 d="M42 24.249c2.667 1.54 2.667 5.388 0 6.928L6 51.962c-2.667 1.54-6-.385-6-3.465V6.928C0 3.85 3.333 1.925 6 3.464L42 24.25Z"
                 fill="#fff" />
             </svg>
-            <svg class="aw-video-controls__stop aw-video-controls__stop_hidden" xmlns="http://www.w3.org/2000/svg"
-              width="45" height="50" viewBox="0 0 45 50" fill="none">
+            <svg class="aw-video-controls__stop aw-video-controls__stop_hidden" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" width="45" height="50" viewBox="0 0 45 50" fill="none">
               <path
                 d="M0 8a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8v34a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8Zm27 0a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8v34a8 8 0 0 1-8 8h-2a8 8 0 0 1-8-8V8Z"
                 fill="#fff" />
@@ -52,8 +52,8 @@
         <div class="aw-button-icon-link">
           <span class="aw-button-icon-link__title">Открыть резюме</span>
           <div class="aw-button-icon-link__icon">
-            <svg class="aw-button-icon-link__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-              viewBox="0 0 24 24" fill="none">
+            <svg class="aw-button-icon-link__svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M4.43 10.512a.75.75 0 0 1 1.058-.081L12 16.012l6.512-5.581a.75.75 0 1 1 .976 1.138l-7 6a.75.75 0 0 1-.976 0l-7-6a.75.75 0 0 1-.081-1.057H4.43Z"
                 fill="#000" />
@@ -61,15 +61,14 @@
                 fill="#000" />
             </svg>
           </div>
-          <a class="aw-button-icon-link__link" href="<?= get_field('resume'); ?>" target="_blank"
-            rel="noopener noreferrer" title="Открыть резюме"></a>
+          <a class="aw-button-icon-link__link" aria-label="Открыть резюме в отдельной вкладке"
+            href="<?= get_field('resume'); ?>" target="_blank" rel="noopener noreferrer" title="Открыть резюме"></a>
         </div>
         <span class="aw-about__action-sub">в формате .pdf</span>
       </div>
     </div>
   </div>
 
-  <!-- Schema.org markup -->
   <meta itemprop="name" content="Анпилогов Артём">
   <meta itemprop="jobTitle" content="Frontend Developer">
   <meta itemprop="description"

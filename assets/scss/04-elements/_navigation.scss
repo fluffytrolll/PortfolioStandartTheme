@@ -15,6 +15,24 @@
       gap: 24px;
    }
 
+   &_wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: vw(24px, 320px);
+
+      @media screen and (min-width: 526px) {
+         flex-wrap: nowrap;
+         justify-content: flex-start;
+         gap: vw(24px, 744px);
+      }
+      @media screen and (min-width: 921px) {
+         gap: vw(24px);
+      }
+      @media screen and (min-width: 1440px) {
+         gap: 24px;
+      }
+   }
+
    &_mobile {
       justify-content: space-between;
       width: 100%;

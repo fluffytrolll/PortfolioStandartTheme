@@ -4,9 +4,16 @@
    top: unset;
    width: 100%;
    z-index: 10;
-   background-color: var(--aw-color-white);
+   backdrop-filter: blur(1px);
+   background-color: #ffffffac;
+
+   @media screen and (min-width: 526px) {
+      backdrop-filter: unset;
+      background-color: transparent;
+   }
 
    @media screen and (min-width: 921px) {
+      background-color: var(--aw-color-white);
       position: sticky;
       top: 0px;
       bottom: unset;

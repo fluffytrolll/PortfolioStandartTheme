@@ -1,0 +1,17 @@
+.aw-feedback {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: vw(32px, 320px);
+
+   @media screen and (min-width: 526px) {
+      align-items: flex-start;
+      margin-top: vw(32px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      margin-top: vw(32px);
+   }
+   @media screen and (min-width: 1440px) {
+      margin-top: 32px;
+   }
+}

@@ -1,0 +1,35 @@
+.aw-blog {
+   display: flex;
+   flex-direction: column;
+   gap: vw(32px, 320px);
+   padding-top: vw(24px, 320px);
+
+   @media screen and (min-width: 526px) {
+      gap: vw(32px, 744px);
+      padding-top: vw(24px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      gap: vw(32px);
+      padding-top: vw(24px);
+   }
+   @media screen and (min-width: 1440px) {
+      gap: 32px;
+      padding-top: 24px;
+   }
+
+   &__search,
+   &__pagination {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__search > form {
+      width: 100%;
+
+      @media screen and (min-width: 526px) {
+         width: fit-content;
+      }
+   }
+}

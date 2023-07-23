@@ -1,0 +1,79 @@
+.aw-pagination {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: vw(8px, 320px);
+
+   @media screen and (min-width: 526px) {
+      gap: vw(8px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      gap: vw(8px);
+   }
+   @media screen and (min-width: 1440px) {
+      gap: 8px;
+   }
+}
+
+.page-numbers {
+   text-align: center;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 100%;
+   background-color: var(--aw-color-gray);
+   color: var(--aw-color-black);
+   transform: scale(1);
+   transition: transform ease-in-out 0.3s;
+   user-select: none;
+   width: vw(42px, 320px);
+   height: vw(42px, 320px);
+   padding: vw(12px, 320px);
+   border-radius: vw(42px, 320px);
+   font-size: vw(20px, 320px);
+
+   &:hover {
+      transform: scale(1.03);
+   }
+
+   &:focus-visible {
+      box-shadow: 0px 0px 0px vw(4px, 320px) rgba(5, 10, 31, 0.3);
+
+      @media screen and (min-width: 526px) {
+         box-shadow: 0px 0px 0px vw(4px, 744px) rgba(5, 10, 31, 0.3);
+      }
+      @media screen and (min-width: 921px) {
+         box-shadow: 0px 0px 0px vw(4px) rgba(5, 10, 31, 0.3);
+      }
+      @media screen and (min-width: 1440px) {
+         box-shadow: 0px 0px 0px 4px rgba(5, 10, 31, 0.3);
+      }
+   }
+
+   @media screen and (min-width: 526px) {
+      width: vw(42px, 744px);
+      height: vw(42px, 744px);
+      padding: vw(12px, 744px);
+      border-radius: vw(42px, 744px);
+      font-size: vw(20px, 744px);
+   }
+   @media screen and (min-width: 921px) {
+      width: vw(42px);
+      height: vw(42px);
+      padding: vw(12px);
+      border-radius: vw(42px);
+      font-size: vw(20px);
+   }
+   @media screen and (min-width: 1440px) {
+      width: 42px;
+      height: 42px;
+      padding: 12px;
+      border-radius: 42px;
+      font-size: 20px;
+   }
+}
+
+.page-numbers.current {
+   background-color: var(--aw-color-black);
+   color: var(--aw-color-white);
+}

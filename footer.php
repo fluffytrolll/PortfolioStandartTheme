@@ -1,5 +1,7 @@
 </main>
-<footer class="aw-footer"></footer>
+<?php
+include_once("inc/footer/footer.php");
+?>
 </body>
 
 </html>

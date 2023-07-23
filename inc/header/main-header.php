@@ -38,7 +38,7 @@ function getMenuIconByNameItem($name)
       $menu_items = wp_get_nav_menu_items("Главное меню");
       if ($menu_items) {
         foreach ($menu_items as $menu_item) {
-          echo '<a class="aw-navigation__item" href="' . $menu_item->url . '" itemprop="url"><span class="aw-navigation__item-name undeline" itemprop="name">' . $menu_item->title . '</span></a>';
+          echo '<a class="aw-navigation__item" href="' . $menu_item->url . '" itemprop="url"><span class="aw-navigation__item-name undeline undeline_yellow" itemprop="name">' . $menu_item->title . '</span></a>';
         }
       }
       ?>
@@ -46,8 +46,8 @@ function getMenuIconByNameItem($name)
   </div>
   <div class="aw-header__wrapper aw-header__wrapper_mobile">
     <?php if (is_home() || is_front_page()) { ?>
-      <a class="aw-header__go-top" href="#top">
-        <svg class="aw-header__go-top__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      <a class="aw-header__go-top" href="#top" aria-label="Вернуться в начало" style="display: none;">
+        <svg class="aw-header__go-top__icon" aria-hidden="none" width="24" height="24" viewBox="0 0 24 24" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M11.512 8.43a.75.75 0 0 1 .976 0l7 6a.751.751 0 0 1-.976 1.14L12 9.987l-6.512 5.581a.75.75 0 1 1-.976-1.138l7-6Z"

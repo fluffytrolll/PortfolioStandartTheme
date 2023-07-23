@@ -42,6 +42,21 @@
       @media screen and (min-width: 921px) {
          grid-area: 2 / 2 / 3 / 3;
       }
+
+      section {
+         display: flex;
+         flex-direction: column;
+         gap: vw(24px, 320px);
+         @media screen and (min-width: 526px) {
+            gap: vw(24px, 744px);
+         }
+         @media screen and (min-width: 921px) {
+            gap: vw(24px);
+         }
+         @media screen and (min-width: 1440px) {
+            gap: 24px;
+         }
+      }
    }
 
    &__wrapper {
@@ -133,7 +148,7 @@
          overflow: auto;
 
          @media screen and (min-width: 526px) {
-            width: vw(744px, 744px);
+            width: vw(640px, 744px);
          }
          @media screen and (min-width: 921px) {
             width: vw(780px);
